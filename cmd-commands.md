@@ -2,7 +2,7 @@
 
 ## File and Directory Commands
 
-### `dir` : Lists the contents of a directory.
+### dir : Lists the contents of a directory.
 
 ```shell
 dir
