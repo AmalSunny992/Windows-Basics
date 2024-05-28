@@ -3,393 +3,332 @@
 ## File and Directory Commands
 
 ### `dir` : Lists the contents of a directory.
+
 ```shell
 dir
 ```
 Example:
-
 ```shell
 dir C:\Users
 ```
 
 ### cd : Changes the current directory.
 
-shell
-Copy code
+```shell
 cd <directory>
+```
 Example:
-
-shell
-Copy code
+```shell
 cd C:\Windows\System32
-md or mkdir
-Creates a new directory.
+```
 
-shell
-Copy code
+### md or mkdir : Creates a new directory.
+```shell
 md <directory>
 mkdir <directory>
+```
 Example:
 
-shell
-Copy code
+```shell
 mkdir C:\NewFolder
-rd or rmdir
-Removes an empty directory.
+```
 
-shell
-Copy code
+### rd or rmdir : Removes an empty directory.
+```shell
 rd <directory>
 rmdir <directory>
+```
 Example:
-
-shell
-Copy code
+```shell
 rmdir C:\OldFolder
-del or erase
-Deletes one or more files.
+```
 
-shell
-Copy code
+### del or erase : Deletes one or more files.
+```shell
 del <file>
 erase <file>
+```
 Example:
-
-shell
-Copy code
+```shell
 del C:\temp\oldfile.txt
-copy
-Copies one or more files to another location.
+```
 
-shell
-Copy code
+### copy : Copies one or more files to another location.
+```shell
 copy <source> <destination>
+```
 Example:
-
-shell
-Copy code
+```shell
 copy C:\file.txt D:\backup\file.txt
-move
-Moves one or more files from one directory to another.
+```
 
-shell
-Copy code
+### move : Moves one or more files from one directory to another.
+```shell
 move <source> <destination>
+```
 Example:
-
-shell
-Copy code
+```shell
 move C:\file.txt D:\backup\file.txt
-rename or ren
-Renames a file or directory.
+```
 
-shell
-Copy code
+### rename or ren : Renames a file or directory.
+```shell 
 rename <oldname> <newname>
 ren <oldname> <newname>
+```
 Example:
+```shell
+ rename C:\file.txt newfile.txt
+```
 
-shell
-Copy code
-rename C:\file.txt newfile.txt
-xcopy
-Copies files and directory trees.
-
-shell
-Copy code
-xcopy <source> <destination> [options]
+### xcopy : Copies files and directory trees.
+```shell
+ xcopy <source> <destination> [options]
+```
 Example:
+```shell
+ xcopy C:\source D:\destination /E /H /C /I
+```
 
-shell
-Copy code
-xcopy C:\source D:\destination /E /H /C /I
-System Information Commands
-systeminfo
-Displays detailed configuration information about a computer and its operating system.
+## System Information Commands
 
-shell
-Copy code
-systeminfo
-hostname
-Displays the hostname of the computer.
+### systeminfo : Displays detailed configuration information about a computer and its operating system.
+```shell
+ systeminfo
+```
 
-shell
-Copy code
-hostname
+### hostname : Displays the hostname of the computer.
+```shell
+ hostname
+```
+
+### tasklist : Displays a list of currently running processes on the local or a remote computer.
+```shell
 tasklist
-Displays a list of currently running processes on the local or a remote computer.
+```
 
-shell
-Copy code
-tasklist
-taskkill
-Ends one or more tasks or processes.
-
-shell
-Copy code
+### taskkill : Ends one or more tasks or processes.
+```shell
 taskkill /F /IM <processname>
+```
 Example:
-
-shell
-Copy code
+```shell 
 taskkill /F /IM notepad.exe
-chkdsk
-Checks a disk and displays a status report.
+```
 
-shell
-Copy code
+### chkdsk : Checks a disk and displays a status report.
+```shell
 chkdsk [volume] [options]
+```
 Example:
+```shell
+ chkdsk C: /F /R
+```
 
-shell
-Copy code
-chkdsk C: /F /R
-Network Commands
+## Network Commands
+
+### ipconfig : Displays all current TCP/IP network configuration values and refreshes Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) settings.
+```shell
 ipconfig
-Displays all current TCP/IP network configuration values and refreshes Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) settings.
+```
 
-shell
-Copy code
-ipconfig
-ping
-Sends ICMP Echo Requests to network hosts.
-
-shell
-Copy code
+### ping : Sends ICMP Echo Requests to network hosts.
+```shell
 ping <hostname or IP address>
+```
 Example:
-
-shell
-Copy code
+```shell
 ping google.com
-tracert
-Traces the route to a remote host.
+```
 
-shell
-Copy code
+### tracert : Traces the route to a remote host.
+```shell
 tracert <hostname or IP address>
+```
 Example:
-
-shell
-Copy code
+```shell 
 tracert google.com
-netstat
-Displays network connections, routing tables, and a number of network interface statistics.
+```
 
-shell
-Copy code
+### netstat : Displays network connections, routing tables, and a number of network interface statistics.
+```shell
 netstat
-nslookup
-Queries the DNS to obtain domain name or IP address mapping or any other specific DNS record.
+```
 
-shell
-Copy code
+### nslookup : Queries the DNS to obtain domain name or IP address mapping or any other specific DNS record.
+```shell
 nslookup <hostname>
+```
 Example:
+```shell
+ nslookup google.com
+```
 
-shell
-Copy code
-nslookup google.com
-Disk Management Commands
+## Disk Management Commands
+
+### diskpart : Opens the Disk Partition command interpreter.
+```shell
 diskpart
-Opens the Disk Partition command interpreter.
+```
 
-shell
-Copy code
-diskpart
-format
-Formats a disk for use with Windows.
-
-shell
-Copy code
+### format : Formats a disk for use with Windows.
+```shell
 format <volume> [options]
+```
 Example:
-
-shell
-Copy code
+```shell
 format D: /FS:NTFS
-diskcopy
-Copies the contents of one floppy disk to another.
+```
 
-shell
-Copy code
-diskcopy <drive1> <drive2>
+### diskcopy : Copies the contents of one floppy disk to another.
+```shell
+ diskcopy <drive1> <drive2>
+```
 Example:
+```shell
+ diskcopy A: B:
+```
 
-shell
-Copy code
-diskcopy A: B:
-User and Group Management Commands
-net user
-Adds, deletes, and displays user accounts.
+## User and Group Management Commands
 
-shell
-Copy code
+### net user : Adds, deletes, and displays user accounts.
+```shell
 net user [username [password | *] [options]] [/domain]
+```
 Example:
-
-shell
-Copy code
+```shell
 net user johndoe Pa$$w0rd /add
-net localgroup
-Adds, displays, or modifies local groups.
+```
 
-shell
-Copy code
+### net localgroup : adds, displays, or modifies local groups.
+```shell
 net localgroup [groupname [username [ ...]] [/add | /delete]]
+```
 Example:
-
-shell
-Copy code
+```shell
 net localgroup administrators johndoe /add
-Miscellaneous Commands
-cls
-Clears the screen.
+```
 
-shell
-Copy code
-cls
-echo
-Displays messages, or turns command echoing on or off.
+## Miscellaneous Commands
 
-shell
-Copy code
+### cls : Clears the screen.
+```shell 
+cls
+```
+
+### echo : Displays messages, or turns command echoing on or off.
+```shell 
 echo [message]
+```
 Example:
-
-shell
-Copy code
+```shell
 echo Hello, World!
-pause
-Suspends processing of a batch file and displays a message.
+```
 
-shell
-Copy code
+### pause: Suspends processing of a batch file and displays a message.
+```shell
 pause
-shutdown
-Shuts down or restarts the computer.
+```
 
-shell
-Copy code
+### shutdown : Shuts down or restarts the computer.
+```shell
 shutdown [options]
+```
 Example:
-
-shell
-Copy code
+```shell
 shutdown /s /t 0
-type
-Displays the contents of a text file.
+```
 
-shell
-Copy code
+### type : Displays the contents of a text file.
+```shell
 type <filename>
+```
 Example:
-
-shell
-Copy code
+```shell
 type C:\example.txt
-attrib
-Displays or changes file attributes.
+```
 
-shell
-Copy code
+### attrib : Displays or changes file attributes.
+```shell 
 attrib [options] <filename>
+```
 Example:
-
-shell
-Copy code
+```shell 
 attrib +r C:\example.txt
-find
-Searches for a text string in a file or files.
+```
 
-shell
-Copy code
+### find : Searches for a text string in a file or files.
+```shell
 find "<string>" <filename>
+```
 Example:
-
-shell
-Copy code
+```shell
 find "Hello" C:\example.txt
-fc
-Compares two files and displays the differences.
+```
 
-shell
-Copy code
+### fc : Compares two files and displays the differences.
+```shell 
 fc <file1> <file2>
+```
 Example:
-
-shell
-Copy code
+```shell 
 fc C:\file1.txt C:\file2.txt
-replace
-Replaces files.
+```
 
-shell
-Copy code
+### replace : Replaces files.
+```shell 
 replace <source> <destination> [options]
+```
 Example:
-
-shell
-Copy code
+```shell 
 replace C:\newfile.txt D:\backup\
-date
-Displays or sets the date.
+```
 
-shell
-Copy code
+### date : Displays or sets the date.
+```shell 
 date [date]
+```
 Example:
-
-shell
-Copy code
+```shell 
 date 12-31-2024
-time
-Displays or sets the system time.
+```
 
-shell
-Copy code
+### time : Displays or sets the system time.
+```shell
 time [time]
+```
 Example:
-
-shell
-Copy code
+```shell
 time 23:59
-color
-Sets the default console foreground and background colors.
+```
 
-shell
-Copy code
+### color : Sets the default console foreground and background colors.
+```shell 
 color [attr]
+```
 Example:
-
-shell
-Copy code
+```shell
 color 0A
-title
-Sets the window title for the CMD session.
+```
 
-shell
-Copy code
+### title : Sets the window title for the CMD session.
+```shell
 title [string]
+```
 Example:
-
-shell
-Copy code
+```shell 
 title My Command Prompt
-ver
-Displays the Windows version.
+```
 
-shell
-Copy code
+### ver : Displays the Windows version.
+```shell
 ver
-set
-Displays, sets, or removes environment variables.
+```
 
-shell
-Copy code
-set [variable=[string]]
+### set : Displays, sets, or removes environment variables.
+```shell
+ set [variable=[string]]
 Example:
-
-shell
-Copy code
+```shell 
 set PATH=C:\Windows\System32
+```
