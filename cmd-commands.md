@@ -327,7 +327,8 @@ ver
 
 ### set : Displays, sets, or removes environment variables.
 ```shell
- set [variable=[string]]
+set [variable=[string]]
+```
 Example:
 ```shell 
 set PATH=C:\Windows\System32
