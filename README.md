@@ -1,3 +1,5 @@
+![Windows Badge](https://img.shields.io/badge/Windows-0078D4?logo=windows&logoColor=fff&style=for-the-badge)
+![PowerShell Badge](https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=fff&style=for-the-badge)
 # Windows
 Welcome to the Windows Operating System Learning Repository! This repository is designed to help you understand the basics of windows Operating System, including using the CMD.
 
